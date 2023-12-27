@@ -1,9 +1,9 @@
-import mongoose  from "mongoose";
+import {dbconnection} from '../utility/dbobject.js';
 import { _userdata } from '../models/userdata.js';
 
 export async function registration(req, res, next){
-    await mongoose.connect(`mongodb://127.0.0.1:27017/tum`)
-    const USER = mongoose.model('USER', _userdata);
+    let get_conn = await dbconnection();
+    const USER = get_conn.model('USER', _userdata);
 
     if ((await USER.exists({username: req.body["username"]})) === null){
         await new USER({
@@ -11,13 +11,13 @@ export async function registration(req, res, next){
             passwd: req.body["password"]
         }).save();
         res.locals.check = true;
-        await mongoose.disconnect();
+        await get_conn.disconnect();
         next();
         
     }
     else{
         res.locals.check = false;
-        await mongoose.disconnect();
+        await get_conn.disconnect();
         next();
     }
 }

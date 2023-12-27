@@ -1,8 +1,8 @@
-import express from 'express'
-import  { routes}   from './routes/routes.js';
-import mongoose  from 'mongoose';
+import express from 'express';
+import { CONFIGURATION } from './utility/const.js';
+import  { routes }   from './routes/routes.js';
 
-let app = new express();
+const app = new express();
 app.use(express.json());
 app.use('/api/v1', routes);
-app.listen(3000, () => { console.log("server started")});
+app.listen(CONFIGURATION.PORT,CONFIGURATION.HOST, () => { console.log("server started")});
