@@ -1,5 +1,5 @@
 ## Project install steps: ##
-* Install nodejs runtime env in your local env
+* install nodejs runtime and mongodb in your localhost
 * git clone Markup : https://github.com/akshaybhuradia2020/NODE_MACHINE_TASK.git
 * cd <proj dir>
 * npm init -y
