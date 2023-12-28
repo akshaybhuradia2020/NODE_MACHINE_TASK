@@ -1,11 +1,14 @@
-Install Nodejs 20 in your local env
+Install nodejs runtime env in your local env
 
 Project install steps:
-1)git clone proj
+1)git clone 
 2)cd <proj dir>
 3)npm init -y
 4)npm i
-5)node index.js
+5)npm install pm2@latest -g ### this is run server as background service
+6)pm2 start index.js
+
+
 
 RestAPI Endpoints
 1) 
