@@ -21,11 +21,8 @@ export async function registration(req, res, next){
             next();
         }
     }
-    catch{
+    catch(error){
         res.locals.check = undefined;
         next()
     }
-
-
-
-}
+};

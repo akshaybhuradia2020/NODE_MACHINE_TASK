@@ -22,9 +22,8 @@ export async function login(req, res, next){
             next();
         }
     }
-    catch{
+    catch(error){
         res.locals.login = undefined;
         next()
     }
-
-}
+};

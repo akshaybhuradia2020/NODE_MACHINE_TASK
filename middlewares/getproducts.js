@@ -6,9 +6,8 @@ export async function getproductdetails(req, res, next){
         res.locals.data = get_data;
         next();
     }
-    catch{
+    catch(error){
         res.locals.data = undefined;
         next();
     }
-
-}
+};

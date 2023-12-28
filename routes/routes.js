@@ -14,7 +14,7 @@ routes.post("/registration", [registration], (req, res, next) => {
     if(res.locals.check === false){
         res.status(409).json({message:"USER IS ALREADY REGISTERED", userreg: false});
     }
-    else if(res.locals.check === false){
+    else if(res.locals.check === true){
         res.status(201).json({message: "USER IS REGISTERED", userreg: true});
     }
     else{
