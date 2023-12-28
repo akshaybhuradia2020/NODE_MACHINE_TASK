@@ -13,19 +13,19 @@
 ### Endpoint : http://127.0.0.1:3000/api/v1/registration ###
 ### Method : POST ###
 ### Body : { "username":"aksay","password":"12346"} ###
-### Response : ###
+### Response : {"message": "USER IS REGISTERED","userreg": true} ###
 
 ### Endpoint : http://127.0.0.1:3000/api/v1/login/?username=akshay&passwd=1234 ###
 ### Method : GET ###
 ### PARAM : username=akshay&passwd=1234 ###
-### Response : {"message": "CORRECT CREDENTIALS","uservalid": true,"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9**"}
+### Response : {"message": "CORRECT CREDENTIALS","uservalid": true,"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9**"} ###
 
 ### Endpoint : http://127.0.0.1:3000/api/v1/get_products/ ###
 ### Method : POST ###
-### Headers : Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
-### Response : Product Data
+### Headers : Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9 ###
+### Response : Product Data ###
 
 
 ### Endpoint : http://127.0.0.1:3000/api/v1/logout/ ###
 ### Method : GET ###
-### Response : Home page
+### Response : Home page ###
