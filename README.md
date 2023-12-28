@@ -22,7 +22,7 @@
 
 ### Endpoint : http://127.0.0.1:3000/api/v1/get_products/ ###
 ### Method : POST ###
-### Headers : Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9 ###
+### Headers : Authorization: token value from login api ###
 ### Response : Product Data ###
 
 
