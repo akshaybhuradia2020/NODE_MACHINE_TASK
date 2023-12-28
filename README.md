@@ -1,6 +1,5 @@
-## Install nodejs runtime env in your local env ##
-
 ## Project install steps: ##
+* Install nodejs runtime env in your local env
 * git clone Markup : https://github.com/akshaybhuradia2020/NODE_MACHINE_TASK.git
 * cd <proj dir>
 * npm init -y
@@ -9,18 +8,19 @@
 * pm2 start index.js
 
 
-
 ## RestAPI Endpoints: ##
+
 ### Endpoint : http://127.0.0.1:3000/api/v1/registration ###
-### Medthod : POST ###
+### Method : POST ###
 ### Body : { "username":"aksay","password":"12346"} ###
 ### Response : ###
 
 ### Endpoint : http://127.0.0.1:3000/api/v1/login/?username=akshay&passwd=1234 ###
-### Medthod : GET ###
+### Method : GET ###
 ### PARAM : username=akshay&passwd=1234 ###
-### Response : ###
+### Response : {"message": "CORRECT CREDENTIALS","uservalid": true,"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9**"}
 
 ### Endpoint : http://127.0.0.1:3000/api/v1/get_products/ ###
-### Medthod : POST ###
-### Response : ###
+### Method : POST ###
+### Headers : Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+### Response : Product Data
