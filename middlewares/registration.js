@@ -5,6 +5,7 @@ export async function registration(req, res, next){
     try{
         let get_conn = await dbconnection();
         const USER = get_conn.model('USER', _userdata);
+        
         if ((await USER.exists({username: req.body["username"]})) === null){
             await new USER({
                 username: req.body["username"],
