@@ -24,3 +24,8 @@
 ### Method : POST ###
 ### Headers : Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 ### Response : Product Data
+
+
+### Endpoint : http://127.0.0.1:3000/api/v1/logout/ ###
+### Method : GET ###
+### Response : Home page

@@ -14,10 +14,12 @@ routes.post("/registration", [registration], (req, res, next) => {
     if(res.locals.check === false){
         res.status(409).json({message:"USER IS ALREADY REGISTERED", userreg: false});
     }
-    else{
+    else if(res.locals.check === false){
         res.status(201).json({message: "USER IS REGISTERED", userreg: true});
     }
-    
+    else{
+        res.status(500).json({message: "SOMETHING WENT WRONG"});
+    }
 });
 
 
@@ -32,11 +34,20 @@ routes.get("/login", [login], (req, res, next) => {
         const token = jwt.sign({username: req.query["username"]}, CONFIGURATION.KEY, { expiresIn: '1h'});
         res.status(200).json({message:"CORRECT CREDENTIALS", uservalid: true, token: token});
     }
+    else{
+        res.status(500).json({message: "SOMETHING WENT WRONG"});
+    }
 });
 
 
 routes.get("/get_products", [verifyToken, getproductdetails], (req, res, next) => {
-    res.status(200).json(res.locals.data);
+    if(res.locals.data === undefined){
+        res.status(500).json({message: "SOMETHING WENT WRONG"});
+    }
+    else{
+        res.status(200).json(res.locals.data);
+    }
+    
 });
 
 
